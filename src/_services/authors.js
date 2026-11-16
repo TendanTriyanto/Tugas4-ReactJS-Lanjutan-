@@ -1,21 +1,29 @@
-import API from '../_api';
+// Menggunakan Local Storage agar langsung berfungsi tanpa backend
+const STORAGE_KEY = 'booksales_authors';
 
 export const getAuthors = async () => {
-  const { data } = await API.get('/authors');
-  return data;
+    const data = localStorage.getItem(STORAGE_KEY);
+    return data ? JSON.parse(data) : [];
 };
 
-export const createAuthor = async (payload) => {
-  const { data } = await API.post('/authors', payload);
-  return data;
+export const createAuthor = async (data) => {
+    const authors = await getAuthors();
+    const newAuthor = { id: Date.now(), ...data };
+    authors.push(newAuthor);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(authors));
+    return newAuthor;
 };
 
-export const updateAuthor = async (id, payload) => {
-  const { data } = await API.put(`/authors/${id}`, payload);
-  return data;
+export const updateAuthor = async (id, data) => {
+    let authors = await getAuthors();
+    authors = authors.map(a => (a.id === id || a._id === id ? { ...a, ...data } : a));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(authors));
+    return data;
 };
 
 export const deleteAuthor = async (id) => {
-  const { data } = await API.delete(`/authors/${id}`);
-  return data;
+    let authors = await getAuthors();
+    authors = authors.filter(a => a.id !== id && a._id !== id);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(authors));
+    return { success: true };
 };

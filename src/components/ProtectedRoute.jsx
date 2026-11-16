@@ -1,33 +1,23 @@
 import React from 'react';
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { Navigate, Outlet } from 'react-router-dom';
 
-function LoadingScreen() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50">
-      <div className="flex flex-col items-center gap-3">
-        <div className="h-10 w-10 animate-spin rounded-full border-4 border-indigo-200 border-t-indigo-600" />
-        <p className="text-sm text-slate-500">Memuat...</p>
-      </div>
-    </div>
-  );
-}
+const ProtectedRoute = ({ allowedRoles }) => {
+  // Ambil token dan role dari localStorage
+  const token = localStorage.getItem('access_token');
+  const userRole = localStorage.getItem('user_role'); // Role pengguna (misal: 'admin' atau 'customer')
 
-export default function ProtectedRoute({ allowedRoles }) {
-  const { user, loading, isAdmin } = useAuth();
-  const location = useLocation();
-
-  if (loading) {
-    return <LoadingScreen />;
+  // 1. Cek apakah user sudah login (token belum ada)
+  if (!token) {
+    return <Navigate to="/login" replace />;
   }
 
-  if (!user) {
-    return <Navigate to="/login" replace state={{ from: location.pathname }} />;
+  // 2. Cek apakah role user diizinkan mengakses halaman ini
+  if (allowedRoles && !allowedRoles.includes(userRole)) {
+    return <Navigate to="/" replace />;
   }
 
-  if (allowedRoles && !allowedRoles.includes(user.role)) {
-    return <Navigate to={isAdmin ? '/admin' : '/'} replace />;
-  }
-
+  // Jika lolos semua pengecekan, tampilkan halamannya
   return <Outlet />;
-}
+};
+
+export default ProtectedRoute;
