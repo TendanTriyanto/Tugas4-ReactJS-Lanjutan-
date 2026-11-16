@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="Cover Filosofi Teras">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.6" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#g)"/>
+  <g fill="#fef3c7" fill-opacity="0.9">
+    <path d="M140 320 L300 220 L460 320 Z"/>
+    <rect x="140" y="320" width="320" height="22" rx="4"/>
+    <rect x="176" y="360" width="34" height="180" rx="4" fill-opacity="0.8"/>
+    <rect x="250" y="360" width="34" height="180" rx="4" fill-opacity="0.8"/>
+    <rect x="324" y="360" width="34" height="180" rx="4" fill-opacity="0.8"/>
+    <rect x="398" y="360" width="34" height="180" rx="4" fill-opacity="0.8"/>
+    <rect x="140" y="552" width="320" height="24" rx="4"/>
+  </g>
+  <circle cx="300" cy="220" r="128" fill="none" stroke="#fef3c7" stroke-opacity="0.18" stroke-width="2"/>
+  <rect x="42" y="42" width="516" height="816" fill="none" stroke="#fef3c7" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="70" y="140" font-family="Helvetica, Arial, sans-serif" font-size="18" letter-spacing="5" fill="#fef3c7">FILSAFAT STOA UNTUK HIDUP MODERN</text>
+  <text x="68" y="680" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="bold" fill="#f8fafc">FILOSOFI</text>
+  <text x="68" y="752" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="bold" fill="#fbbf24">TERAS</text>
+  <line x1="70" y1="792" x2="300" y2="792" stroke="#fef3c7" stroke-width="4"/>
+  <text x="70" y="845" font-family="Helvetica, Arial, sans-serif" font-size="23" letter-spacing="3" fill="#fef3c7">HENRY MANAMPIRING</text>
+</svg>

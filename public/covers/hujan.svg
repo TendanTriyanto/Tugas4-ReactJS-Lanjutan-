@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="Cover Hujan">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#164e63"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#g)"/>
+  <g stroke="#a5f3fc" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round">
+    <line x1="90" y1="220" x2="40" y2="400"/>
+    <line x1="170" y1="180" x2="120" y2="360"/>
+    <line x1="250" y1="240" x2="200" y2="420"/>
+    <line x1="330" y1="190" x2="280" y2="370"/>
+    <line x1="410" y1="250" x2="360" y2="430"/>
+    <line x1="490" y1="200" x2="440" y2="380"/>
+    <line x1="560" y1="260" x2="510" y2="440"/>
+    <line x1="130" y1="470" x2="80" y2="650"/>
+    <line x1="290" y1="450" x2="240" y2="630"/>
+    <line x1="450" y1="470" x2="400" y2="650"/>
+  </g>
+  <circle cx="300" cy="330" r="150" fill="#e0f2fe" fill-opacity="0.08"/>
+  <circle cx="300" cy="330" r="100" fill="#e0f2fe" fill-opacity="0.07"/>
+  <rect x="42" y="42" width="516" height="816" fill="none" stroke="#a5f3fc" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="70" y="150" font-family="Helvetica, Arial, sans-serif" font-size="19" letter-spacing="6" fill="#a5f3fc">NOVEL FIKSI ILMIAH</text>
+  <text x="68" y="690" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="bold" fill="#f0fdfa">HUJAN</text>
+  <line x1="70" y1="740" x2="290" y2="740" stroke="#67e8f9" stroke-width="4"/>
+  <text x="70" y="800" font-family="Helvetica, Arial, sans-serif" font-size="24" letter-spacing="3" fill="#a5f3fc">TERE LIYE</text>
+  <text x="70" y="840" font-family="Helvetica, Arial, sans-serif" font-size="17" letter-spacing="5" fill="#a5f3fc" fill-opacity="0.7">BOOKSTORE</text>
+</svg>

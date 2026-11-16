@@ -1,28 +1,21 @@
-const STORAGE_KEY = 'booksales_genres';
+import API from '../_api';
 
 export const getGenres = async () => {
-    const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : [];
+  const { data } = await API.get('/genres');
+  return data;
 };
 
-export const createGenre = async (data) => {
-    const genres = await getGenres();
-    const newGenre = { id: Date.now(), ...data };
-    genres.push(newGenre);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(genres));
-    return newGenre;
+export const createGenre = async (payload) => {
+  const { data } = await API.post('/genres', payload);
+  return data;
 };
 
-export const updateGenre = async (id, data) => {
-    let genres = await getGenres();
-    genres = genres.map(g => (g.id === id || g._id === id ? { ...g, ...data } : g));
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(genres));
-    return data;
+export const updateGenre = async (id, payload) => {
+  const { data } = await API.put(`/genres/${id}`, payload);
+  return data;
 };
 
 export const deleteGenre = async (id) => {
-    let genres = await getGenres();
-    genres = genres.filter(g => g.id !== id && g._id !== id);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(genres));
-    return { success: true };
+  const { data } = await API.delete(`/genres/${id}`);
+  return data;
 };

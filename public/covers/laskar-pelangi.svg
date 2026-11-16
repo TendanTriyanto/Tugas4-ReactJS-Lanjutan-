@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="Cover Laskar Pelangi">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="0.6" stop-color="#0891b2"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#g)"/>
+  <g fill="none" stroke-width="26" stroke-linecap="round">
+    <path d="M20 520 A300 300 0 0 1 580 520" stroke="#ef4444" stroke-opacity="0.9"/>
+    <path d="M60 520 A260 260 0 0 1 540 520" stroke="#f59e0b" stroke-opacity="0.9"/>
+    <path d="M100 520 A220 220 0 0 1 500 520" stroke="#facc15" stroke-opacity="0.9"/>
+    <path d="M140 520 A180 180 0 0 1 460 520" stroke="#22c55e" stroke-opacity="0.9"/>
+    <path d="M180 520 A140 140 0 0 1 420 520" stroke="#a855f7" stroke-opacity="0.9"/>
+  </g>
+  <path d="M0 640 C120 600 200 690 320 660 C440 630 520 700 600 650 L600 900 L0 900 Z" fill="#0f766e" fill-opacity="0.75"/>
+  <rect x="42" y="42" width="516" height="816" fill="none" stroke="#e0f2fe" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="70" y="140" font-family="Helvetica, Arial, sans-serif" font-size="19" letter-spacing="6" fill="#e0f2fe">NOVEL INSPIRATIF</text>
+  <text x="68" y="720" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="bold" fill="#ffffff">LASKAR</text>
+  <text x="68" y="798" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="bold" fill="#fde68a">PELANGI</text>
+  <line x1="70" y1="830" x2="300" y2="830" stroke="#e0f2fe" stroke-width="4"/>
+  <text x="70" y="875" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="3" fill="#e0f2fe">ANDREA HIRATA</text>
+</svg>
